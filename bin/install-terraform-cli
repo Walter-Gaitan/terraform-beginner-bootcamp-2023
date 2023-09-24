@@ -18,5 +18,5 @@ sudo apt update
 
 sudo apt-get install terraform -y
 
-cd "$PROJECT_ROOT" || exit
 
+cd "$PROJECT_ROOT" || exit
