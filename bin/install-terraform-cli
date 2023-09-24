@@ -17,3 +17,6 @@ https://apt.releases.hashicorp.com $(lsb_release -cs) main" |
 sudo apt update
 
 sudo apt-get install terraform -y
+
+
+cd "$PROJECT_ROOT" || exit
