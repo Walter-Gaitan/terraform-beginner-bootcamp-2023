@@ -7,7 +7,7 @@ This project is going utilize semantic versioning for its tagging.
 
 The general format:
 
- **MAJOR.MINOR.PATCH**, eg. `1.0.1`
+**MAJOR.MINOR.PATCH**, eg. `1.0.1`
 
 - **MAJOR** version when you make incompatible API changes
 - **MINOR** version when you add functionality in a backward compatible manner
@@ -16,18 +16,17 @@ The general format:
 ## Install the Terraform CLI
 
 ### Considerations with the Terraform CLI changes
+
 The Terraform CLI installation instructions have changed due to gpg keyring changes. So we needed refer to the latest install CLI instructions via Terraform Documentation and change the scripting for install.
 
 [Install Terraform CLI](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 
-
 ### Considerations for Linux Distribution
 
 This project is built against Ubunutu.
-Please consider checking your Linux Distrubtion and change accordingly to distrubtion needs. 
+Please consider checking your Linux Distrubtion and change accordingly to distrubtion needs.
 
-[How To Check OS Version in Linux](
-https://www.cyberciti.biz/faq/how-to-check-os-version-in-linux-command-line/)
+[How To Check OS Version in Linux](https://www.cyberciti.biz/faq/how-to-check-os-version-in-linux-command-line/)
 
 Example of checking OS Version:
 
@@ -64,8 +63,8 @@ A Shebang (prounced Sha-bang) tells the bash script what program that will inter
 
 ChatGPT recommended this format for bash: `#!/usr/bin/env bash`
 
-- for portability for different OS distributions 
--  will search the user's PATH for the bash executable
+- for portability for different OS distributions
+- will search the user's PATH for the bash executable
 
 https://en.wikipedia.org/wiki/Shebang_(Unix)
 
@@ -75,7 +74,7 @@ When executing the bash script we can use the `./` shorthand notiation to execut
 
 eg. `./bin/install_terraform_cli`
 
-If we are using a script in .gitpod.yml  we need to point the script to a program to interpert it.
+If we are using a script in .gitpod.yml we need to point the script to a program to interpert it.
 
 eg. `source ./bin/install_terraform_cli`
 
