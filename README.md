@@ -1,14 +1,27 @@
 # Terraform Beginner Bootcamp 2023
 
-## Semantic Versioning :mage:
+## Install Terraform CLI
 
-This project is going utilize semantic versioning for its tagging.
-[semver.org](https://semver.org/)
+### Refactoring into Bash Scripts
 
-The general format:
+While fixing the Terraform CLI gpg depreciation issues we notice that bash scripts steps were a considerable amount more code. So we decided to create a bash script to install the Terraform CLI.
 
-**MAJOR.MINOR.PATCH**, eg. `1.0.1`
+This bash script is located here: [./bin/install_terraform_cli](./bin/install_terraform_cli)
 
-- **MAJOR** version when you make incompatible API changes
-- **MINOR** version when you add functionality in a backward compatible manner
-- **PATCH** version when you make backward compatible bug fixes
+- This will keep the Gitpod Task File ([.gitpod.yml](.gitpod.yml)) tidy.
+- This allow us an easier to debug and execute manually Terraform CLI install
+- This will allow better portability for other projects that need to install Terraform CLI.
+
+#### Linux Permissions Considerations
+
+In order to make our bash scripts executable we need to change linux permission for the fix to be executable at the user mode.
+
+```sh
+chmod u+x ./bin/install_terraform_cli
+```
+
+alternatively:
+
+```sh
+chmod 744 ./bin/install_terraform_cli
+```
