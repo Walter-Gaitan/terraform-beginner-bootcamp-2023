@@ -234,3 +234,27 @@ If you lose this file, you lose knowning the state of your infrastructure.
 ### Terraform Directory
 
 `.terraform` directory contains binaries of terraform providers.
+
+## Terraform Cloud Configuration
+
+To use this project with Terraform Cloud, follow these steps:
+
+1. Sign up for a Terraform Cloud account at [Terraform Cloud](https://www.terraform.io/cloud).
+2. Create a new Terraform Cloud workspace.
+3. Configure the required environment variables in your Terraform Cloud workspace, such as AWS access keys or other secrets.
+4. Update the source configuration in the `.gitpod.yml` file to point to the correct script.
+
+```
+
+## Workspace Setup
+
+...
+
+> **Note:** Fix install_terraform_cli name:
+
+   ```shell
+   source ./bin/install_terraform_cli
+   ```
+
+Note: If you encounter a "No such file or directory" error, please ensure that the file name is correct. The file should be named `install_terraform_cli`, not `install-terraform-cli`.
+```
