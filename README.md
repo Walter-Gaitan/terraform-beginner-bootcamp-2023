@@ -258,3 +258,25 @@ To use this project with Terraform Cloud, follow these steps:
 
 Note: If you encounter a "No such file or directory" error, please ensure that the file name is correct. The file should be named `install_terraform_cli`, not `install-terraform-cli`.
 ```
+
+## Creating a New Token in Terraform Cloud
+
+To authenticate and interact with Terraform Cloud, you'll need to create a new token. Follow these steps to generate a token:
+
+1. Login to your Terraform Cloud account.
+
+2. From the Terraform Cloud dashboard, navigate to the user settings by clicking on your user icon in the top right corner, then select **User Settings**.
+
+3. In the user settings page, click on the **Tokens** tab.
+
+4. Click on the **Create API token** button.
+
+5. Provide a name for your token (e.g., "Project Token") and click **Generate token**.
+
+6. A new token will be generated. Copy and securely store this token, as it will be required for authentication in the project.
+
+## Generating credentials.tfrc.json
+
+To generate the credentials.tfrc.json file, you can use the provided bash script generate_credentials.sh. This script automates the process by utilizing the TERRAFORM_CLOUD_TOKEN environment variable. Make sure you have set the TERRAFORM_CLOUD_TOKEN environment variable with your Terraform Cloud API token before running the script.
+
+After executing the script, the credentials.tfrc.json file will be generated in the project directory, allowing you to securely authenticate and interact with Terraform Cloud.
