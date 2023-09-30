@@ -280,3 +280,8 @@ To authenticate and interact with Terraform Cloud, you'll need to create a new t
 To generate the credentials.tfrc.json file, you can use the provided bash script generate_credentials.sh. This script automates the process by utilizing the TERRAFORM_CLOUD_TOKEN environment variable. Make sure you have set the TERRAFORM_CLOUD_TOKEN environment variable with your Terraform Cloud API token before running the script.
 
 After executing the script, the credentials.tfrc.json file will be generated in the project directory, allowing you to securely authenticate and interact with Terraform Cloud.
+
+## Add tf as an alias for terraform
+1. Create a bash script with 'set_tf_alias'
+2. make it executable 
+3. test it by restarting gitpod session
