@@ -9,9 +9,6 @@ tasks:
     init: |
       source ./bin/set_tf_alias
       source ./bin/install_aws_cli
-    command: |
-      # Run your AWS CLI commands here
-
   - name: http-server
     before: |
       npm install --global http-server
